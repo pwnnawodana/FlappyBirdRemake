@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BirdController : MonoBehaviour
 {
-    private float upForce = 200f;
-    private readonly bool isDead = false;
+    private readonly float upForce = 200f;
+    private bool isDead = false;
     private Rigidbody2D rb2D;
 
     // Start is called before the first frame update
@@ -25,5 +25,11 @@ public class BirdController : MonoBehaviour
                 rb2D.AddForce(new Vector2(0, upForce));
             }
         }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isDead = true;
     }
 }
