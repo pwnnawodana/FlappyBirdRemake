@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {   //bool
-    private bool gameOver = false;
+    public bool gameOver = false;
+    public readonly float scrollSpeed = -1.5f;
     //GameObjects
     public GameObject gameOverText;
     public static GameControl instance;
